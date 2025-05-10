@@ -41,7 +41,7 @@ function Testimonials() {
       >
         <SwiperSlide>
           <div className="relative mt-[70px] w-[700px] max-[801px]:w-[500px] max-[641px]:w-[280px]">
-            <p className={`${theme === "light" ? "text-black" : "text-white"} absolute text-[76px] top-[-60px] opacity-60 z-[1]`}>
+            <p className={`${theme === "light" ? "text-black" : "text-white"} absolute text-[76px] max-sm:text-[52px] top-[-60px] opacity-60 z-[1]`}>
               ❝
             </p>
             <div className="flex max-sm:flex-col justify-between">
@@ -61,14 +61,14 @@ function Testimonials() {
             >
               Saved 40% by buying Figma licenses from SoftSell!
             </p>
-            <p className={`${theme === "light" ? "text-black" : "text-white"} absolute text-[76px] top-[30px] opacity-60 right-0 z-[1] max-sm:top-[100px]`}>
+            <p className={`${theme === "light" ? "text-black" : "text-white"} absolute text-[76px] max-sm:text-[52px] top-[30px] opacity-60 right-0 z-[1] max-sm:top-[100px]`}>
               ❞
             </p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="relative mt-[70px] w-[700px] max-[801px]:w-[500px] max-[641px]:w-[280px]">
-            <p className={`${theme === "light" ? "text-black" : "text-white"} absolute text-[76px] top-[-60px] opacity-60 z-[1]`}>
+            <p className={`${theme === "light" ? "text-black" : "text-white"} absolute text-[76px] max-sm:text-[52px] top-[-60px] opacity-60 z-[1]`}>
               ❝
             </p>
             <div className="flex max-sm:flex-col justify-between">
@@ -88,7 +88,7 @@ function Testimonials() {
             >
               We offloaded our old Adobe licenses and got paid in days.
             </p>
-            <p className={`${theme === "light" ? "text-black" : "text-white"} absolute text-[76px] top-[30px] opacity-60 right-0 z-[1] max-sm:top-[100px]`}>
+            <p className={`${theme === "light" ? "text-black" : "text-white"} absolute text-[76px] max-sm:text-[52px] top-[30px] opacity-60 right-0 z-[1] max-sm:top-[100px]`}>
               ❞
             </p>
           </div>

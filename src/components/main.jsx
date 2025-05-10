@@ -12,7 +12,7 @@ function Home() {
         theme === "light" ? "" : "bg-[#0f172a]"
       } relative transition-all h-[100vh] px-[80px] max-sm:py-[40px] max-[480px]:items-start max-lg:px-[40px] max-md:px-[20px] flex justify-center items-center`}
     >
-      <div className="w-[70%] max-xl:w-[900px] max-lg:w-full flex-col max-[480px]:flex max-[480px]:justify-between max-[480px]:h-[80vh]">
+      <div className="w-[70%] max-xl:w-[900px] max-lg:w-full flex-col max-[480px]:flex max-[480px]:justify-between max-[480px]:h-[75vh]">
         <div>
           <h1
             className={`${
