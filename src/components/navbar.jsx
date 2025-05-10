@@ -5,11 +5,11 @@ import ThemeContext from "../context/themeContext";
 function Navbar() {
   const { theme, setTheme } = useContext(ThemeContext);
   return (
-    <nav className="fixed flex max-lg:bottom-0 max-lg:h-[50px] max-lg:w-full items-center justify-center h-[100vh] z-[5]">
+    <nav className="fixed flex max-lg:bottom-0 max-lg:h-[55px] max-lg:w-full items-center justify-center h-[100vh] z-[5]">
       <div
         className={`border-[1px] ${
           theme === "light" ? "bg-white border-[#00000033]" : "bg-[#1e293b] border-[#ffffff33]"
-        } ml-[-1px] max-lg:ml-0 max-lg:w-full max-lg:items-center max-lg:justify-between max-sm:px-[20px] max-lg:px-[40px] max-lg:rounded-[0] max-lg:flex rounded-r-xl max-lg:h-[50px] h-[400px]`}
+        } ml-[-1px] max-lg:ml-0 max-lg:w-full max-lg:items-center max-lg:justify-between max-sm:px-[0px] max-sm:pr-[5px] max-lg:px-[40px] max-lg:rounded-[0] max-lg:flex rounded-r-xl max-lg:h-[55px] h-[400px]`}
       >
         <a href="#home">
           <img
@@ -20,20 +20,20 @@ function Navbar() {
             alt=""
           />
         </a>
-        <div className="flex max-lg:flex-row flex-col items-center gap-[4px] max-lg:gap-[12px] max-[360px]:gap-[6px] z-[5] justify-center max-sm:my-0 mt-[32px] mb-[32px]">
-          <a className="text-[28px] max-[360px]:text-[25px]" href="#home" title="Home">
+        <div className="flex max-lg:flex-row flex-col items-center gap-[4px] max-lg:gap-[12px] max-sm:gap-[6px] z-[5] justify-center max-sm:my-0 mt-[32px] mb-[32px]">
+          <a className="text-[28px]" href="#home" title="Home">
             🏠
           </a>
-          <a className="text-[28px] max-[360px]:text-[25px]" href="#how" title="How It Works">
+          <a className="text-[28px]" href="#how" title="How It Works">
             ⚙️
           </a>
-          <a className="text-[28px] max-[360px]:text-[25px]" href="#why" title="Why Us">
+          <a className="text-[28px]" href="#why" title="Why Us">
             ✨
           </a>
-          <a className="text-[28px] max-[360px]:text-[25px]" href="#testimonials" title="Testimonials">
+          <a className="text-[28px]" href="#testimonials" title="Testimonials">
             💬
           </a>
-          <a className="text-[28px] max-[360px]:text-[25px]" href="#contact" title="Contact">
+          <a className="text-[28px]" href="#contact" title="Contact">
             📬
           </a>
         </div>

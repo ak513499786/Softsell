@@ -4,6 +4,7 @@ import { useState } from "react";
 
 function Contact() {
   const [form, setfrom] = useState("sell");
+  const [formSubmitted, setformSubmitted] = useState(false);
   const { theme } = useContext(ThemeContext);
   const [formData, setFormData] = useState({
     name: "",
@@ -48,8 +49,8 @@ function Contact() {
       setErrors(newErrors);
     } else {
       setSubmitted(true);
+      setformSubmitted(true);
       setTimeout(() => {
-        alert("Form submitted successfully!");
         setSubmitted(false);
         setFormData({
           name: "",
@@ -74,8 +75,8 @@ function Contact() {
       setBuyErrors(newErrors);
     } else {
       setBuySubmitted(true);
+      setformSubmitted(true);
       setTimeout(() => {
-        alert("Form submitted successfully!");
         setBuySubmitted(false);
         setFormBuyData({
           name: "",
@@ -93,7 +94,7 @@ function Contact() {
       id="contact"
       className={`${
         theme === "light" ? "" : "bg-[#0f172a]"
-      } px-[80px] max-lg:px-[40px] max-md:px-[20px] gap-[5px] max-lg:flex-col transition-all flex justify-between max-sm:flex-col max-sm:gap-[24px] max-lg:h-auto max-lg:py-[121px] max-sm:py-[80px] h-[601px] pt-[121px]`}
+      } px-[80px] max-lg:px-[40px] max-md:px-[20px] gap-[5px] max-lg:flex-col transition-all flex justify-between max-sm:flex-col max-sm:gap-[24px] max-lg:h-auto max-lg:py-[121px] max-md:py-[80px] h-[601px] pt-[121px]`}
     >
       <div>
         <h1
@@ -118,8 +119,8 @@ function Contact() {
           className={`cursor-pointer font-[Syne] rounded-t-xl ${
             form === "sell"
               ? "bg-sky-300 border-sky-600 top-[2px] border-b-[0px]"
-              : "bg-sky-600 border-transparent top-[0px]"
-          } text-black hover:bg-sky-300 relative max-[480px]:text-base font-[400] border-[1px] z-[2] text-[14px] px-[12px] py-[6px] transition-all`}
+              : "bg-sky-600 border-transparent text-white top-[0px]"
+          } text-black hover:bg-sky-300 relative hover:text-black max-[480px]:text-base font-[400] border-[1px] z-[2] text-[14px] px-[12px] py-[6px] transition-all`}
         >
           I Want to Sell
         </button>
@@ -130,16 +131,16 @@ function Contact() {
           onClick={() => setfrom("buy")}
           className={`cursor-pointer font-[Syne] rounded-t-xl ${
             form === "buy"
-              ? "bg-blue-300 border-blue-600 top-[2px] border-b-[0px]"
-              : "bg-blue-600 border-transparent top-[0px]"
-          } text-black hover:bg-blue-300 max-[480px]:text-base relative z-[2] border-[1px] text-[14px] px-[12px] py-[6px] transition-all`}
+              ? "bg-blue-300 border-blue-600 text-back top-[2px] border-b-[0px]"
+              : "bg-blue-600 border-transparent text-white top-[0px]"
+          } text-black hover:bg-blue-300 hover:text-black max-[480px]:text-base relative z-[2] border-[1px] text-[14px] px-[12px] py-[6px] transition-all`}
         >
           I Want to Buy
         </button>
         {form === "sell" && (
           <form
             onSubmit={handleSubmit}
-            className="w-[500px] relative max-sm:w-full max-sm:h-auto max-sm:px-[20px] border-[1px] border-sky-600 bg-sky-300 px-[32px] py-[24px] rounded-xl rounded-tl-[0px] h-[auto]"
+            className="w-[500px] relative max-sm:w-full max-sm:h-auto max-sm:px-[20px] border-[1px] border-sky-900 bg-sky-300 px-[32px] py-[24px] rounded-xl rounded-tl-[0px] h-[auto]"
           >
             <div className="flex justify-between max-sm:flex-col max-sm:gap-[24px]">
               <div className="flex flex-col">
@@ -242,7 +243,7 @@ function Contact() {
 
             <button
               type="submit"
-              className="mt-[32px] w-full max-[480px]:text-base h-[42px] bg-sky-500 rounded-[7px] cursor-pointer text-black hover:bg-sky-400 hover:border-sky-600 border-[1px] border-transparent transition-all"
+              className="mt-[32px] w-full max-[480px]:text-base h-[42px] font-semibold hover:text-black text-white bg-sky-500 rounded-[7px] cursor-pointer text-black hover:bg-sky-400 hover:border-sky-900 border-[1px] border-transparent transition-all"
             >
               {submitted ? "Submitting..." : "Submit"}
             </button>
@@ -354,13 +355,32 @@ function Contact() {
 
             <button
               type="submit"
-              className="mt-[32px] max-[480px]:text-base w-full h-[42px] bg-blue-500 rounded-[7px] cursor-pointer text-black hover:bg-blue-400 hover:border-blue-600 border-[1px] border-transparent transition-all"
+              className="mt-[32px] max-[480px]:text-base font-semibold hover:text-black text-white w-full h-[42px] bg-blue-500 rounded-[7px] cursor-pointer text-black hover:bg-blue-400 hover:border-blue-600 border-[1px] border-transparent transition-all"
             >
               {buysubmitted ? "Submitting..." : "Submit"}
             </button>
           </form>
         )}
       </div>
+      {formSubmitted && (
+        <>
+          <div className="bg-black fixed top-0 left-0 w-full h-[100vh] z-[10] opacity-40"></div>
+          <div className="fixed top-0 left-0 w-full h-[100vh] z-[11] flex justify-center items-center">
+            <div className="bg-white relative w-[280px] h-[120px] rounded-[14px] shadow-[0px_0px_40px_#00000066]">
+              <p
+                className="absolute right-[9px] text-[20px] font-bold top-[0px] cursor-pointer"
+                onClick={() => setformSubmitted(false)}
+              >
+                ×
+              </p>
+              <h1 className="text-center py-[35px] px-[20px] font-bold leading-[120%]">
+                Thank you for submitting the form, we will get back to you
+                within 15 minutes.
+              </h1>
+            </div>
+          </div>
+        </>
+      )}
     </section>
   );
 }

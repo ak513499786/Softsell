@@ -14,7 +14,7 @@ function Testimonials() {
       id="testimonials"
       className={`${
         theme === "light" ? "" : "bg-[#0f172a]"
-      } px-[80px] max-lg:px-[40px] max-md:px-[20px] transition-all flex flex-col items-center py-[121px] max-sm:py-[80px]`}
+      } px-[80px] max-lg:px-[40px] max-sm:py-[40px] max-md:px-[20px] transition-all flex flex-col items-center py-[121px] max-md:py-[80px]`}
     >
       <h1
         className={`${
