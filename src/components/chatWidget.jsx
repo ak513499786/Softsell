@@ -99,7 +99,7 @@ const ChatWidget = () => {
 
       <div
         className={` ${
-          isOpen ? "opacity-100 p-3 space-y-2 h-37 max-sm:h-50" : "h-0 opacity-0"
+          isOpen ? "opacity-100 p-3 space-y-2 h-37 max-sm:h-52" : "h-0 opacity-0"
         } bg-slate-700 transition-all duration-500`}
       >
         <div className="flex flex-wrap gap-2">
