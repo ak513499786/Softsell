@@ -29,6 +29,9 @@ const ChatWidget = () => {
       const mockAnswers = {
         "how do i sell my license?":
           "Just fill the form, upload your license, and we’ll send you a quote!",
+        "hi": "Hi, Thank you for contacting SoftSell Chatbot. How can I help you?",
+        "hi there":
+          "Hi, Thank you for contacting SoftSell Chatbot. How can I help you?",
         "can i buy licenses from softsell?":
           "Yes, we’ll match you with verified sellers!",
         "is license transfer legal?":
