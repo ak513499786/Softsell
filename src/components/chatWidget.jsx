@@ -11,6 +11,7 @@ const ChatWidget = () => {
 
   const predefinedQuestions = [
     "How do I sell my license?",
+    "are buyers verified?",
     "Can I buy licenses from SoftSell?",
     "Is license transfer legal?",
     "What tools can I sell?",
@@ -30,6 +31,22 @@ const ChatWidget = () => {
           "Just fill the form, upload your license, and we’ll send you a quote!",
         "can i buy licenses from softsell?":
           "Yes, we’ll match you with verified sellers!",
+        "is license transfer legal?":
+          "Yes, but it depends on the software’s terms. We ensure all transfers are compliant.",
+        "what tools can i sell?":
+          "You can sell most one-time purchased licenses like Adobe, Microsoft Office, etc.",
+        "how long does the process take?":
+          "Typically, selling your license takes 24–48 hours once verified.",
+        "do i need proof of purchase?":
+          "Yes, uploading your proof of purchase helps us verify authenticity quickly.",
+        "is there a commission?":
+          "SoftSell charges a small service fee, which is deducted from your sale earnings.",
+        "how do i contact support?":
+          "You can reach out via our contact form or email us at support@softsell.io.",
+        "can i cancel my listing?":
+          "Yes, you can cancel your listing anytime before it’s sold.",
+        "are buyers verified?":
+          "All buyers and sellers on SoftSell are verified to maintain trust and security.",
       };
 
       const reply = mockAnswers[userMessage.toLowerCase()] || fallback;
@@ -60,7 +77,11 @@ const ChatWidget = () => {
           </button>
         )}
       </div>
-      <div className={` ${isOpen ? "h-64 space-y-2 p-3 bg-slate-600" : "h-0 bg-slate-0"} transition-all overflow-y-auto text-sm duration-500`}>
+      <div
+        className={` ${
+          isOpen ? "h-64 space-y-2 p-3 bg-slate-600" : "h-0 bg-slate-0"
+        } transition-all overflow-y-auto text-sm duration-500`}
+      >
         {messages.map((msg, idx) => (
           <div
             key={idx}
@@ -73,7 +94,11 @@ const ChatWidget = () => {
         ))}
       </div>
 
-      <div className={` ${isOpen ? "opacity-100 p-3 space-y-2 h-37" : "h-0 opacity-0"} bg-slate-700 transition-all duration-500`}>
+      <div
+        className={` ${
+          isOpen ? "opacity-100 p-3 space-y-2 h-37" : "h-0 opacity-0"
+        } bg-slate-700 transition-all duration-500`}
+      >
         <div className="flex flex-wrap gap-2">
           {predefinedQuestions.map((q, i) => (
             <button
