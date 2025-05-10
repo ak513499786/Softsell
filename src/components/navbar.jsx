@@ -5,7 +5,7 @@ import ThemeContext from "../context/themeContext";
 function Navbar() {
   const { theme, setTheme } = useContext(ThemeContext);
   return (
-    <nav className="fixed flex max-lg:bottom-0 max-[440px]:w-[440px] max-lg:h-[50px] max-lg:w-full items-center justify-center h-[100vh] z-[5]">
+    <nav className="fixed flex max-lg:bottom-0 max-lg:h-[50px] max-lg:w-full items-center justify-center h-[100vh] z-[5]">
       <div
         className={`border-[1px] ${
           theme === "light" ? "bg-white border-[#00000033]" : "bg-[#1e293b] border-[#ffffff33]"
@@ -20,20 +20,20 @@ function Navbar() {
             alt=""
           />
         </a>
-        <div className="flex max-lg:flex-row flex-col items-center gap-[4px] z-[5] justify-center max-sm:my-0 mt-[32px] mb-[32px]">
-          <a className="text-[28px] max-[440px]:text-[24px]" href="#home" title="Home">
+        <div className="flex max-lg:flex-row flex-col items-center gap-[4px] max-lg:gap-[12px] max-[360px]:gap-[6px] z-[5] justify-center max-sm:my-0 mt-[32px] mb-[32px]">
+          <a className="text-[28px] max-[360px]:text-[25px]" href="#home" title="Home">
             🏠
           </a>
-          <a className="text-[28px] max-[440px]:text-[24px]" href="#how" title="How It Works">
+          <a className="text-[28px] max-[360px]:text-[25px]" href="#how" title="How It Works">
             ⚙️
           </a>
-          <a className="text-[28px] max-[440px]:text-[24px]" href="#why" title="Why Us">
+          <a className="text-[28px] max-[360px]:text-[25px]" href="#why" title="Why Us">
             ✨
           </a>
-          <a className="text-[28px] max-[440px]:text-[24px]" href="#testimonials" title="Testimonials">
+          <a className="text-[28px] max-[360px]:text-[25px]" href="#testimonials" title="Testimonials">
             💬
           </a>
-          <a className="text-[28px] max-[440px]:text-[24px]" href="#contact" title="Contact">
+          <a className="text-[28px] max-[360px]:text-[25px]" href="#contact" title="Contact">
             📬
           </a>
         </div>

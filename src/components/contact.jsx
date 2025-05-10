@@ -119,7 +119,7 @@ function Contact() {
             form === "sell"
               ? "bg-sky-300 border-sky-600 top-[2px] border-b-[0px]"
               : "bg-sky-600 border-transparent top-[0px]"
-          } text-black hover:bg-sky-300 relative font-[400] border-[1px] z-[2] text-[14px] px-[12px] py-[6px] transition-all`}
+          } text-black hover:bg-sky-300 relative max-[480px]:text-base font-[400] border-[1px] z-[2] text-[14px] px-[12px] py-[6px] transition-all`}
         >
           I Want to Sell
         </button>
@@ -132,7 +132,7 @@ function Contact() {
             form === "buy"
               ? "bg-blue-300 border-blue-600 top-[2px] border-b-[0px]"
               : "bg-blue-600 border-transparent top-[0px]"
-          } text-black hover:bg-blue-300 relative z-[2] border-[1px] text-[14px] px-[12px] py-[6px] transition-all`}
+          } text-black hover:bg-blue-300 max-[480px]:text-base relative z-[2] border-[1px] text-[14px] px-[12px] py-[6px] transition-all`}
         >
           I Want to Buy
         </button>
@@ -242,7 +242,7 @@ function Contact() {
 
             <button
               type="submit"
-              className="mt-[32px] w-full h-[42px] bg-sky-500 rounded-[7px] cursor-pointer text-black hover:bg-sky-400 hover:border-sky-600 border-[1px] border-transparent transition-all"
+              className="mt-[32px] w-full max-[480px]:text-base h-[42px] bg-sky-500 rounded-[7px] cursor-pointer text-black hover:bg-sky-400 hover:border-sky-600 border-[1px] border-transparent transition-all"
             >
               {submitted ? "Submitting..." : "Submit"}
             </button>
@@ -354,7 +354,7 @@ function Contact() {
 
             <button
               type="submit"
-              className="mt-[32px] w-full h-[42px] bg-blue-500 rounded-[7px] cursor-pointer text-black hover:bg-blue-400 hover:border-blue-600 border-[1px] border-transparent transition-all"
+              className="mt-[32px] max-[480px]:text-base w-full h-[42px] bg-blue-500 rounded-[7px] cursor-pointer text-black hover:bg-blue-400 hover:border-blue-600 border-[1px] border-transparent transition-all"
             >
               {buysubmitted ? "Submitting..." : "Submit"}
             </button>

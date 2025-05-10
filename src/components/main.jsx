@@ -34,7 +34,7 @@ function Home() {
           <a href="#contact">
             <button
               onClick={() => setfrom("sell")}
-              className="cursor-pointer font-[Syne] max-[480px]:w-full max-[480px]:mr-0 max-[480px]:mb-[24px] rounded-[7px] mr-[32px] hover:bg-sky-300 border-[1px] border-transparent hover:border-sky-600 bg-sky-600 text-black text-[14px] font-[600] px-[12px] py-[6px] transition-all"
+              className="cursor-pointer font-[Syne] max-[480px]:w-full max-[480px]:mr-0 max-[480px]:mb-[24px] rounded-[7px] mr-[32px] hover:bg-sky-300 border-[1px] border-transparent hover:border-sky-600 max-[480px]:text-base bg-sky-600 text-black text-[14px] font-[600] px-[12px] py-[6px] transition-all"
             >
               I Want to Sell
             </button>
@@ -42,7 +42,7 @@ function Home() {
           <a href="#contact">
             <button
               onClick={() => setfrom("buy")}
-              className="cursor-pointer font-[Syne] max-[480px]:w-full rounded-[7px] hover:bg-blue-300 border-[1px] border-transparent hover:border-blue-600 bg-blue-600 text-black text-[14px] font-[600] px-[12px] py-[6px] transition-all"
+              className="cursor-pointer font-[Syne] max-[480px]:w-full rounded-[7px] hover:bg-blue-300 border-[1px] border-transparent hover:border-blue-600 bg-blue-600 text-black text-[14px] font-[600] max-[480px]:text-base px-[12px] py-[6px] transition-all"
             >
               I Want to Buy
             </button>
