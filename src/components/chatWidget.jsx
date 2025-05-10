@@ -82,7 +82,7 @@ const ChatWidget = () => {
       </div>
       <div
         className={` ${
-          isOpen ? "h-64 space-y-2 p-3 bg-slate-600" : "h-0 bg-slate-0"
+          isOpen ? "h-64 max-sm:h-70 space-y-2 p-3 bg-slate-600" : "h-0 bg-slate-0"
         } transition-all overflow-y-auto text-sm duration-500`}
       >
         {messages.map((msg, idx) => (
@@ -99,7 +99,7 @@ const ChatWidget = () => {
 
       <div
         className={` ${
-          isOpen ? "opacity-100 p-3 space-y-2 h-37" : "h-0 opacity-0"
+          isOpen ? "opacity-100 p-3 space-y-2 h-37 max-sm:h-50" : "h-0 opacity-0"
         } bg-slate-700 transition-all duration-500`}
       >
         <div className="flex flex-wrap gap-2">

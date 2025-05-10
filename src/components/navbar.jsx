@@ -20,7 +20,7 @@ function Navbar() {
             alt=""
           />
         </a>
-        <div className="flex max-lg:flex-row flex-col items-center gap-[4px] max-lg:gap-[12px] max-sm:gap-[6px] z-[5] justify-center max-sm:my-0 mt-[32px] mb-[32px]">
+        <div className="flex max-lg:flex-row flex-col items-center gap-[4px] max-lg:gap-[12px] z-[5] justify-center max-sm:my-0 mt-[32px] mb-[32px]">
           <a className="text-[28px]" href="#home" title="Home">
             🏠
           </a>
